@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Fullscreen Image</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    /* Remove default margin and padding */
     html, body {
       margin: 0;
       padding: 0;
@@ -13,12 +14,16 @@
       overflow: hidden;
     }
 
-    body {
-      background: url('banner.jpg') no-repeat center center fixed;
-      background-size: cover;
+    /* Make image fill the screen and maintain aspect ratio */
+    img {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover; /* scales & crops as needed */
     }
   </style>
 </head>
 <body>
+  <img src="banner.png" alt="Fullscreen Banner Image" />
 </body>
 </html>
